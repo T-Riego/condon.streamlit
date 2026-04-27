@@ -1,0 +1,22 @@
+# Revisão do Sistema de Gestão de Condomínio
+---
+Data: domingo, 26 de abril de 2026
+Duração: 83 minutos
+---
+
+## Resumo
+## Visão Geral
+A reunião de 83 minutos foi dedicada à explicação detalhada do sistema de gestão de condomínio utilizado por Tiago, com foco na coleta e organização de dados de consumo de água e gás, cálculos de rateio, controle financeiro e geração de relatórios para condôminos. Tiago demonstrou o fluxo completo desde a leitura dos medidores até a emissão de recibos em PDF, passando por planilhas interconectadas no Android, com fórmulas para apuração de consumo, custos proporcionais e armazenamento de histórico. Foram abordadas as particularidades de cada tabela, como a separação entre consumo individual e condominial, o tratamento do esgoto com base no uso de água, e a necessidade de arredondamentos para fechar as contas. A explicação incluiu estratégias para manter a integridade dos dados ao longo do tempo, como cópias mensais e uso de fórmulas dinâmicas. O processo final envolve a geração de três tipos de planilhas para envio aos condôminos, com destaque para Lucas e Clara que recebem informações personalizadas, e a automação parcial com macros para exportação em PDF. Tiago enfatizou a importância dos detalhes para evitar erros e a necessidade de continuar a explicação em outro momento para concluir todo o fluxo.
+
+## Pontos Principais
+
+* Tiago realiza mensalmente a leitura dos medidores de água e gás de 14 apartamentos, incluindo dois medidores para o apartamento 21 (um para o apartamento e outro para a piscina), registrando os dados em uma planilha no celular Android com auxílio da lanterna para melhor visualização.
+* Os dados de consumo são transferidos para uma planilha chamada 'Tabela 1', onde são calculados os consumos individuais com base na diferença entre a leitura atual e a anterior, totalizando 210 mil litros de água e 25 metros cúbicos de gás no mês de março de 2026.
+* Uma tabela específica para gás é mantida devido ao abastecimento de dois cilindros grandes, com registro de 320 kg de gás abastecidos em janeiro de 2016 a R$15,14 por quilo, e conversão para metros cúbicos usando um fator fixo de 2,5 kg/m³ para cálculo de custos.
+* A planilha de água ('copaza') é detalhadamente decomposta, incluindo valores de abastecimento, uso de recurso hídrico e esgoto, com cálculo do custo por metro cúbico (R$7,65 no exemplo) e tratamento proporcional do esgoto com base no consumo individual de água para garantir justiça no rateio.
+* O consumo condominial (faxineira) é calculado como a diferença entre o total da conta e a soma dos consumos individuais, resultando em 19 metros cúbicos de água não atribuídos a apartamentos, e é distribuído proporcionalmente entre os condôminos no rateio final.
+* Tiago utiliza uma 'Tabela 2' para consolidar os consumos individuais e condominiais, com fórmulas que transferem dados da Tabela 1 e calculam percentuais de consumo, garantindo que o total de proporções chegue a 100%, com ajustes por arredondamento para evitar discrepâncias de centavos.
+* Uma tabela de rateio é criada para distribuir despesas condominiais como manutenção, seguro do prédio, retenções federais (R$208,45 no exemplo) e honorários da contadora, somando R$4.065,00 a serem divididos entre os 14 condôminos, com ajuste final para os 13 que pagam ao síndico.
+* O fundo de reserva mensal de R$150,00 é integrado ao cálculo final e mantido como fórmula para flexibilidade, resultando em um valor total a pagar de R$462,74 por condômino, com decisão de não cobrar centavos conforme convenção anterior.
+* Para preservar o histórico, Tiago copia mensalmente a última linha da planilha de cálculos para um arquivo de armazenamento, evitando perda de dados e permitindo recuperação em caso de necessidade, mantendo um banco de dados completo no celular.
+* A planilha de pagamentos é atualizada com dados reais (data, forma de pagamento, número do recibo), marcando se o recibo foi enviado, e posteriormente os dados
