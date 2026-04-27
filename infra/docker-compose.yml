@@ -1,0 +1,35 @@
+version: "3.8"
+
+networks:
+  traefik-net:
+    external: true
+
+services:
+  traefik:
+    image: traefik:v3.0
+    container_name: traefik
+    restart: unless-stopped
+    networks:
+      - traefik-net
+    ports:
+      - "127.0.0.1:8090:80"   # apenas interno — nginx faz proxy para cá
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik.yml:/traefik.yml:ro
+    labels:
+      - "traefik.enable=false"
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    restart: unless-stopped
+    networks:
+      - traefik-net
+    ports:
+      - "127.0.0.1:9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+volumes:
+  portainer_data:

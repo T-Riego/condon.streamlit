@@ -7,3 +7,4 @@ venv/
 .streamlit/secrets.toml
 *.db
 *.sqlite
+pixel-perfect-replica/
