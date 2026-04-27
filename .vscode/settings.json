@@ -1,0 +1,58 @@
+{
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true,
+    "editor.fontSize": 14,
+    "debug.console.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "editor.glyphMargin": false,
+    "workbench.activityBar.location": "top",
+    "editor.lineNumbers": "on",
+    "files.eol": "\n", // Final de linha sempre será LF
+    "workbench.editor.labelFormat": "short",
+    "editor.tabSize": 2,
+    "explorer.compactFolders": false,
+    "editor.minimap.enabled": false,
+    "workbench.editor.enablePreview": false,
+    "code-runner.clearPreviousOutput": false,
+    "code-runner.runInTerminal": true,
+    // 🛠 Formatação e Lint
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "code-runner.ignoreSelection": true,
+    "code-runner.executorMap": {
+        "typescript": "cls; npx tsx"
+    },
+    "tailwindCSS.experimental.classRegex": [
+        [
+            "clsx\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ]
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "never",
+        "source.fixAll.prettier": "never"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[xml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[svg]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prisma.pinToPrisma6": true,
+    "WillLuke.nextjs.addTypesOnSave": true,
+    "WillLuke.nextjs.hasPrompted": true,
+    "[prisma]": {
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "tailwindCSS.hovers": false,
+    "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
+}
