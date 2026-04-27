@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+from core.auth import require_auth
+require_auth()
 
 import streamlit as st
 import pandas as pd

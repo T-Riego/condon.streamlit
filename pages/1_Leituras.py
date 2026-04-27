@@ -1,6 +1,8 @@
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
+from core.auth import require_auth
+require_auth()
 
 import streamlit as st
 from data.mock_data import APARTAMENTOS, LEITURAS_ANTERIORES, CONSUMOS_ABRIL_2026, init_session_state

@@ -3,6 +3,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 import streamlit as st
+from core.auth import require_auth
+require_auth()
 import pandas as pd
 from data.mock_data import (
     VALORES_ABRIL_2026, MORADORES, FUNDO_RESERVA_SALDO,
