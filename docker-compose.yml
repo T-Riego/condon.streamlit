@@ -1,0 +1,18 @@
+version: "3.8"
+
+networks:
+  traefik-net:
+    external: true
+
+services:
+  streamlit:
+    build: .
+    container_name: condon-streamlit
+    restart: unless-stopped
+    networks:
+      - traefik-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.streamlit.rule=Host(`condon.streamlit.riegos.dev`)"
+      - "traefik.http.routers.streamlit.entrypoints=web"
+      - "traefik.http.services.streamlit.loadbalancer.server.port=8501"
