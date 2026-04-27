@@ -1,6 +1,6 @@
 #!/bin/bash
 # Setup único na VPS — rodar como root uma vez
-# bash /opt/condon/infra/setup-vps.sh
+# bash /var/www/condon/infra/setup-vps.sh
 set -e
 
 EMAIL="tiago@riegos.dev"
@@ -9,7 +9,7 @@ echo "==> Criando rede Docker compartilhada..."
 docker network create traefik-net 2>/dev/null || echo "Rede traefik-net já existe."
 
 echo "==> Subindo Traefik + Portainer..."
-cd /opt/condon/infra
+cd /var/www/condon/infra
 docker compose up -d
 
 echo "==> Instalando certbot..."
@@ -17,7 +17,7 @@ apt-get update -q
 apt-get install -y certbot python3-certbot-nginx
 
 echo "==> Copiando config nginx (blocos sem SSL ainda)..."
-cp /opt/condon/infra/nginx-condon.conf /etc/nginx/sites-available/condon
+cp /var/www/condon/infra/nginx-condon.conf /etc/nginx/sites-available/condon
 ln -sf /etc/nginx/sites-available/condon /etc/nginx/sites-enabled/condon
 
 # Habilitar apenas os blocos HTTP enquanto não há cert
