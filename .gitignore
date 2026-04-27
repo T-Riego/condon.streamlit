@@ -1,10 +1,25 @@
+# Credenciais — nunca commitar
 .env
+api/.env
+pixel-perfect-replica/.env.local
+pixel-perfect-replica/.env.*.local
+
+# Python
 __pycache__/
 *.pyc
 *.pyo
 .venv/
 venv/
+api/.venv/
+api/venv/
 .streamlit/secrets.toml
 *.db
 *.sqlite
-pixel-perfect-replica/
+
+# Node
+pixel-perfect-replica/node_modules/
+pixel-perfect-replica/dist/
+
+# OS
+.DS_Store
+Thumbs.db
