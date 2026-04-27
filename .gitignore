@@ -19,6 +19,7 @@ api/venv/
 # Node
 pixel-perfect-replica/node_modules/
 pixel-perfect-replica/dist/
+pixel-perfect-replica/
 
 # OS
 .DS_Store
