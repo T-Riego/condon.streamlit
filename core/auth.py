@@ -2,15 +2,15 @@ import os
 import requests
 import streamlit as st
 
-VITE_SUPABASE_URL = os.getenv("VITE_SUPABASE_URL", "https://mgkyqailpawykhzsidxd.supabase.co")
-VITE_SUPABASE_ANON_KEY = os.getenv("VITE_SUPABASE_ANON_KEY", "")
+SUPABASE_URL = os.getenv("SUPABASE_URL", "https://mgkyqailpawykhzsidxd.supabase.co")
+SUPABASE_ANON_KEY = os.getenv("SUPABASE_ANON_KEY", "")
 
 
 def sign_in(email: str, password: str) -> dict | None:
     """Autentica via Supabase Auth. Retorna user dict ou None se falhar."""
     resp = requests.post(
-        f"{VITE_SUPABASE_URL}/auth/v1/token?grant_type=password",
-        headers={"apikey": VITE_SUPABASE_ANON_KEY, "Content-Type": "application/json"},
+        f"{SUPABASE_URL}/auth/v1/token?grant_type=password",
+        headers={"apikey": SUPABASE_ANON_KEY, "Content-Type": "application/json"},
         json={"email": email, "password": password},
         timeout=10,
     )

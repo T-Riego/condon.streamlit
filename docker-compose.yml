@@ -11,6 +11,9 @@ services:
     restart: unless-stopped
     networks:
       - traefik-net
+    env_file: .env
+    healthcheck:
+      disable: true
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.streamlit.rule=Host(`condon.streamlit.riegos.dev`)"
