@@ -1,5 +1,5 @@
 #!/bin/bash
-# Setup completo da VPS — rodar como root em 187.55.77.125
+# Setup completo da VPS — rodar como root em 187.77.55.125
 # Uso: bash /tmp/vps-setup-manual.sh
 set -e
 
@@ -7,7 +7,7 @@ BASE="/var/www/condon"
 EMAIL="tiago@riegos.dev"
 SUPABASE_URL="https://mgkyqailpawykhzsidxd.supabase.co"
 SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1na3lxYWlscGF3eWtoenNpZHhkIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3NzI1Njc5NCwiZXhwIjoyMDkyODMyNzk0fQ.p9ZTMAo38MMHfZFduFCBGlzLyj_mej6164O-A8QIdRQ"
-SUPABASE_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1na3lxYWlscGF3eWtoenNpZHhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyNTY3OTQsImV4cCI6MjA5MjgzMjc5NH0.fhngOe8nYJ07ln8yH19X0YLop_yBf24MDuaEstqu7Po"
+SUPABASE_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1na3lxYWlscGF3eWtoenNpZHhkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyNTY3OTQsImV4cCI6MjA5MjgzMjc5NH0.fhngOe8nYj07ln8yH19X0YLop_yBf24MDuaEstqu7Po"
 
 echo "==> [1/7] Clonando repositórios em $BASE ..."
 mkdir -p "$BASE"
@@ -58,13 +58,13 @@ networks:
 
 services:
   traefik:
-    image: traefik:v3.0
+    image: traefik:latest
     container_name: traefik
     restart: unless-stopped
     networks:
       - traefik-net
     ports:
-      - "127.0.0.1:8090:80"
+      - "8090:80"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./traefik.yml:/traefik.yml:ro
@@ -78,7 +78,7 @@ services:
     networks:
       - traefik-net
     ports:
-      - "127.0.0.1:9000:9000"
+      - "9000:9000"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data

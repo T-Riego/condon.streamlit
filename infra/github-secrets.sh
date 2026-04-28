@@ -3,7 +3,7 @@
 # Rodar localmente com: bash github-secrets.sh
 # Requer: gh CLI autenticado como T-Riego
 
-VPS_HOST="187.55.77.125"
+VPS_HOST="187.77.55.125"
 VPS_USER="root"
 # VPS_PASSWORD: definir antes de rodar
 # export VPS_PASSWORD="sua_senha"
